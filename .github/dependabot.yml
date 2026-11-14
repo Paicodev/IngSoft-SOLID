@@ -1,0 +1,14 @@
+version: 2
+updates:
+  # Monitorea las acciones usadas en .github/workflows (SCA sobre CI/CD)
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+
+  # Si el proyecto Java usara Maven (pom.xml) o Gradle (build.gradle),
+  # se habilita así para analizar dependencias externas (SCA):
+  # - package-ecosystem: "maven"
+  #   directory: "/"
+  #   schedule:
+  #     interval: "weekly"
